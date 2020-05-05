@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		408CA9C82461943F006541BE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408CA9C72461943F006541BE /* main.swift */; };
+		408CA9CF2461945D006541BE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408CA9CE2461945D006541BE /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,9 @@
 
 /* Begin PBXFileReference section */
 		408CA9C42461943F006541BE /* GitXcode_ForkServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GitXcode_ForkServer; sourceTree = BUILT_PRODUCTS_DIR; };
-		408CA9C72461943F006541BE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		408CA9CE2461945D006541BE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		408CA9D0246194AD006541BE /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		408CA9D1246194BB006541BE /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,8 @@
 		408CA9BB2461943F006541BE = {
 			isa = PBXGroup;
 			children = (
+				408CA9D1246194BB006541BE /* .gitattributes */,
+				408CA9D0246194AD006541BE /* .gitignore */,
 				408CA9C62461943F006541BE /* GitXcode_ForkServer */,
 				408CA9C52461943F006541BE /* Products */,
 			);
@@ -57,7 +61,7 @@
 		408CA9C62461943F006541BE /* GitXcode_ForkServer */ = {
 			isa = PBXGroup;
 			children = (
-				408CA9C72461943F006541BE /* main.swift */,
+				408CA9CE2461945D006541BE /* main.swift */,
 			);
 			path = GitXcode_ForkServer;
 			sourceTree = "<group>";
@@ -94,6 +98,7 @@
 				TargetAttributes = {
 					408CA9C32461943F006541BE = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -120,7 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				408CA9C82461943F006541BE /* main.swift in Sources */,
+				408CA9CF2461945D006541BE /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,10 +248,17 @@
 		408CA9CC2461943F006541BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PYD56G8J2V;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -254,9 +266,15 @@
 		408CA9CD2461943F006541BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PYD56G8J2V;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
